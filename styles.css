@@ -1,0 +1,202 @@
+/* Styling awal navbar */
+.navbar {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.3s;
+}
+
+/* Styling link navbar */
+.nav-link {
+  color: white;
+  transition: color 0.3s ease;
+}
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.navbar-brand {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+/* Styling navbar saat digulir */
+.navbar.scrolled {
+  background-color: rgb(59, 209, 255) !important;
+}
+
+/* Styling link navbar saat digulir */
+.navbar.scrolled .nav-link {
+  color: rgb(0, 0, 0) !important;
+}
+
+.navbar.scrolled .nav-link.active {
+  color: white !important;
+}
+
+.navbar.scrolled .navbar-brand {
+  color: black !important;
+}
+
+/* Hover effect saat navbar digulir */
+.navbar.scrolled .nav-link:hover {
+  background-color: black; /* Warna hitam */
+  color: white !important; /* Warna teks putih saat hover */
+  transition: background-color 0.3s ease;
+  padding-left: 8px;
+}
+
+/* Hover effect saat navbar tidak digulir */
+.nav-link:hover {
+  background-color: black; /* Warna hitam */
+  opacity: 40%;
+  color: rgb(0, 195, 255) !important; /* Warna teks biru laut */
+  padding-left: 8px;
+}
+
+.submenu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: black;
+  opacity: 40%;
+}
+
+.submenu li {
+  margin: 0;
+}
+
+.submenu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.submenu a:hover {
+  background-color: #e9ecef;
+}
+
+.nav-item:hover .submenu {
+  display: block;
+}
+
+.jumbotron {
+  padding-top: 10rem;
+  padding-bottom: 26rem;
+  /* background-color: rgb(83, 213, 253); */
+  position: relative;
+  background-image: url("img/bg-main.jpg");
+  background-size: cover; /* Menyesuaikan ukuran gambar dengan elemen */
+  background-position: center; /* Memposisikan gambar di tengah */
+  background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+  transition: filter 0.3s ease; /* Menambahkan transisi untuk efek blur */
+}
+
+/* Efek fading pada jumbotron saat digulir */
+.jumbotron.fade {
+  opacity: 0.9; /* Ubah nilai opasitas sesuai keinginan */
+  transition: opacity 0.8s ease; /* Animasi fading */
+}
+
+.jumbotron.blur {
+  filter: blur(5px); /* Menambahkan efek blur */
+}
+
+#projects {
+  background-color: rgb(0, 195, 255);
+}
+
+section {
+  padding-top: 8rem;
+}
+
+.typing-effect {
+  display: inline-block;
+  white-space: normal;
+  overflow: hidden;
+  border-right: 0.15em solid rgb(0, 195, 255); /* Cursor style */
+}
+
+.blink-cursor {
+  animation: blink-caret 0.5s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(0, 195, 255);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 570px) {
+  .typing-effect {
+    font-size: 1em; /* Adjust font size for mobile */
+  }
+}
+
+#upButton {
+  display: none; /* Sembunyikan secara default */
+  position: fixed; /* Tetapkan posisi tetap */
+  bottom: 50px; /* 20px dari bawah */
+  right: 20px; /* 20px dari kanan */
+  z-index: 99; /* Pastikan tombol berada di atas elemen lain */
+  border: none; /* Hilangkan border */
+  outline: none; /* Hilangkan outline */
+  background-color: rgb(255, 242, 0); /* Warna background (biru laut) */
+  color: black; /* Warna teks hitam */
+  cursor: pointer; /* Ubah kursor saat hover */
+  padding: 10px; /* Padding tombol */
+  border-radius: 8px; /* Sudut bulat */
+  opacity: 0; /* Transparansi awal */
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* Transisi opasitas dan visibilitas */
+}
+
+#upButton.show {
+  display: block; /* Tampilkan tombol */
+  opacity: 1; /* Buat tombol sepenuhnya terlihat */
+}
+
+#upButton:not(.show) {
+  visibility: hidden ease-out; /* Sembunyikan tombol */
+  opacity: 0 ease-out; /* Buat tombol tidak terlihat */
+}
+
+#upButton:hover {
+  background-color: rgb(0, 195, 255) d; /* Warna background saat hover */
+  color: white;
+}
+
+.tab-list {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0;
+}
+
+.tab-list li {
+  padding-left: 2em; /* Adjust as needed */
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 500px; /* Tentukan tinggi sesuai kebutuhan */
+  object-fit: cover; /* Memastikan gambar menutupi area tanpa mengubah aspek rasio */
+}
+
+#map {
+  /*Bidang untuk menampilkan maps*/
+  height: 400px;
+  width: 100%;
+}
